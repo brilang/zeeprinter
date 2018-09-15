@@ -1,20 +1,20 @@
-import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'; 
+import React from 'react'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap' 
 
 class MainMenu extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 
-		this.toggle = this.toggle.bind(this);
+		this.toggle = this.toggle.bind(this)
 		this.state = {
 			isOpen: false
-		};
+		}
 	}
 
 	toggle() {
 		this.setState({
 			isOpen: !this.state.isOpen
-		});
+		})
 	}
 
 	render() {
@@ -52,8 +52,8 @@ class MainMenu extends React.Component {
 					</Collapse>
 				</Navbar>
 			</div>
-		);
+		)
 	}
 }
 
-export default MainMenu;
+export default MainMenu

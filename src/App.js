@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import MainMenu from './components/MainMenu/MainMenu'
 
 class App extends Component {
@@ -9,8 +9,8 @@ class App extends Component {
         <MainMenu></MainMenu>
         Zee Printer
       </div>
-    );
+		)
   }
 }
 
-export default App;
+export default App
