@@ -1,59 +1,19 @@
 import React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap' 
+import { Navbar, NavbarBrand } from 'reactstrap' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQrcode } from '@fortawesome/free-solid-svg-icons'
 
-class MainMenu extends React.Component {
-	constructor(props) {
-		super(props)
-
-		this.toggle = this.toggle.bind(this)
-		this.state = {
-			isOpen: false
-		}
-	}
-
-	toggle() {
-		this.setState({
-			isOpen: !this.state.isOpen
-		})
-	}
-
-	render() {
-		return (
-			<div>
-				<Navbar color="success" dark expand="md">
-					<NavbarBrand href="/">Zee Printer</NavbarBrand>
-					<NavbarToggler onClick={this.toggle} />
-					<Collapse isOpen={this.state.isOpen} navbar>
-						<Nav className="ml-auto" navbar>
-							<NavItem>
-								<NavLink href="/components/">Components</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-							</NavItem>
-							<UncontrolledDropdown nav inNavbar>
-								<DropdownToggle nav caret>
-									Options
-								</DropdownToggle>
-								<DropdownMenu right>
-									<DropdownItem>
-										Option 1
-									</DropdownItem>
-									<DropdownItem>
-										Option 2
-									</DropdownItem>
-									<DropdownItem divider />
-									<DropdownItem>
-										Reset
-									</DropdownItem>
-								</DropdownMenu>
-							</UncontrolledDropdown>
-						</Nav>
-					</Collapse>
-				</Navbar>
-			</div>
-		)
-	}
-}
+const MainMenu = (props) => {
+	return (
+		<div>
+			<Navbar color="success" dark expand="md">
+				<NavbarBrand href="/">
+					<FontAwesomeIcon icon={faQrcode} size="2x" />{' '}
+					<h1 style={{display: "inline-block", paddingLeft: "15px"}}> Zee Printer</h1>
+				</NavbarBrand>
+			</Navbar>
+		</div>
+	)
+};
 
 export default MainMenu
