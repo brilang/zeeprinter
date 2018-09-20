@@ -1,7 +1,7 @@
-import React from 'react'
-import { Navbar, NavbarBrand } from 'reactstrap' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQrcode } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { Navbar, NavbarBrand } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQrcode } from '@fortawesome/free-solid-svg-icons';
 
 const MainMenu = (props) => {
 	return (
@@ -13,7 +13,7 @@ const MainMenu = (props) => {
 				</NavbarBrand>
 			</Navbar>
 		</div>
-	)
+	);
 };
 
-export default MainMenu
+export default MainMenu;

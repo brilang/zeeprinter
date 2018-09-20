@@ -14,7 +14,6 @@ class UrlForm extends Component {
 			popoverOpen: false,
 			codes: ''
 		};
-
 	}
 
 	handleChange(event) {
@@ -24,20 +23,11 @@ class UrlForm extends Component {
 	onGeneratePDF(event) {
 		event.preventDefault();
 		this.props.generatePDF(this.state.codes);
+	}
 
-		// const inputcodes = this.state.codes
-		// 	.replace(/\r\n/g,"\n").replace(/(?:(?:\r\n|\r|\n)\s*){2}/gm, "")
-		// 	.split('\n')
-		// 	.filter( code => { return code.length > 1 } );
-
-		// const qrcodes = [];
-		// inputcodes.map( function(code) {
-		// 	QRCode.toDataURL(code, {width: 200}, function(err, url) {
-		// 		qrcodes.push( {code: code, url: url} )
-		// 	})
-		// 	return null
-		// });
-		// this.setState( { qrcodes: qrcodes });
+	onClearForm(event) {
+		event.preventDefault();
+		this.props.clearForm()
 	}
 
 	toggle(event) {
@@ -63,7 +53,7 @@ class UrlForm extends Component {
 					</FormGroup>
 					<hr />
 					<Button color='success' onClick={this.onGeneratePDF.bind(this)}>Create PDF</Button>{' '}
-					<Button color='danger' type='reset'>Clear Form</Button>{' '}
+					<Button color='danger' onClick={this.onClearForm.bind(this)}>Clear Form</Button>{' '}
 				</Form>
 
 				<Popover placement='right' isOpen={this.state.popoverOpen} target='Popover1' toggle={this.toggle}>
