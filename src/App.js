@@ -25,7 +25,6 @@ class App extends Component {
 			.filter( code => { return code.length > 1 } );
 		if ( inputcodes.length ) {
 			let username = inputcodes[0].split('/').slice(1)[3];
-			console.log(username)
 			const qrcodes = [];
 			inputcodes.map( function(code) {
 				QRCode.toDataURL(code, {width: 100}, function(err, url) {
@@ -50,7 +49,6 @@ class App extends Component {
 				let maxpagerowcount = t.rowsperpage * t.rowsperlabel;
 
 				for ( let i = 0; i < qrcodes.length; i++ ) {
-					// console.log(x,y);
 					// Add code image to pdf
 					doc.addImage(qrcodes[i].url, 'JPEG', x, y, w, h);
 					// move width + gutter to the right
