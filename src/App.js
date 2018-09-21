@@ -113,17 +113,19 @@ class App extends Component {
 					<MainMenu />
 					<Row className='mt-4'>
 						<Col lg='6'>
-							<h1>Zee Printer</h1>
-							<p>Create your own Munzee stickers</p>
+							<h3>Create your own Munzee stickers</h3>
 							<hr />
 							<UrlForm generatePDF={this.onGeneratePDF.bind(this)} clearForm={this.onClearForm.bind(this)} />
 						</Col>
 						<Col lg='6'>
+							<p>Showing { this.state.qrcodes.length > 42 ? 'First 42' : this.state.qrcodes.length } Munzees </p>
 							<div id='qrcodes'>
 							{ this.state.qrcodes.length
-								? this.state.qrcodes.map( function(src) {
-									return <img key={uuidv4()} src={src.url} alt={src.code} title={src.code} style={{width: "75px", height: "auto"}} />
-								})
+								? this.state.qrcodes
+									.slice(0, 42)
+									.map( function(src) {
+										return <img key={uuidv4()} src={src.url} alt={src.code} title={src.code} style={{width: "75px", height: "auto"}} />
+									})
 								: null
 							}
 							</div>
