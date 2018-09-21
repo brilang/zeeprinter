@@ -1,8 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBeer } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = (props) => {
 	return (
@@ -16,7 +15,8 @@ const Footer = (props) => {
 				</div>
 				<div className="col text-center">
 					<a href="https://www.facebook.com/brilang" target='_blank' rel='noopener noreferrer'><FontAwesomeIcon icon={faFacebookSquare} size="2x" /></a>{' '}
-					<a href="https://twitter.com/brilang" target='_blank' rel='noopener noreferrer'><FontAwesomeIcon icon={faTwitterSquare} size="2x" /></a>
+					<a href="https://twitter.com/brilang" target='_blank' rel='noopener noreferrer'><FontAwesomeIcon icon={faTwitterSquare} size="2x" /></a>{' '}
+					<a href="https://github.com/brilang/zeeprinter" target='_blank' rel='noopener noreferrer'><FontAwesomeIcon icon={faGithub} size="2x" /></a>
 				</div>
 			</div>
 		</footer>
