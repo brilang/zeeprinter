@@ -6,6 +6,7 @@ import jsPDF from 'jspdf';
 
 import MainMenu from './components/MainMenu/MainMenu';
 import UrlForm from './components/UrlForm/UrlForm';
+import Footer from './components/Footer/Footer';
 import t from './templates/template8163'
 
 class App extends Component {
@@ -128,6 +129,7 @@ class App extends Component {
 							</div>
 						</Col>
 					</Row>
+					<Footer />
 				</Container>
 			</div>
 		);
