@@ -1,15 +1,13 @@
 {
   "name": "zeeprinter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
-    "@fortawesome/free-regular-svg-icons": "^5.3.1",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "bootstrap": "^4.1.3",
-    "flag-icon-css": "^3.0.0",
     "jspdf": "^1.4.1",
     "popper.js": "^1.14.4",
     "qrcode": "^1.2.2",
