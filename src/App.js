@@ -30,13 +30,17 @@ class App extends Component {
       let username = inputcodes[0].split("/").slice(1)[3];
       const qrcodes = [];
       inputcodes.map(function(code) {
-        QRCode.toDataURL(code, { width: 100 }, function(err, url) {
+        QRCode.toDataURL(code, { width: 90 }, function(err, url) {
           qrcodes.push({ code: code, url: url });
         });
         return null;
       });
       if (qrcodes.length) {
-        const doc = new jsPDF({ orientation: "p", unit: "mm", format: "letter" });
+        const doc = new jsPDF({
+          orientation: "p",
+          unit: "mm",
+          format: "letter"
+        });
         // doc.addImage(t.background, "PNG", 0, 0, 216, 279);
         let x = t.pageleftmargin + t.horizontalgutterlabelleft;
         let y = t.pagetopmargin + t.verticalgutterlabeltop;
@@ -103,6 +107,9 @@ class App extends Component {
             pagerowcount = 0;
           }
         }
+        // console.log(doc.output("datauristring"));
+        // console.log(doc);
+
         doc.save(username + "-munzees-" + uuidv4() + ".pdf");
       }
       this.setState({ codes: newcodes, qrcodes: qrcodes });
