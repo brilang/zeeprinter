@@ -1,4 +1,4 @@
-const template8163 = {
+const template8163100 = {
   name: 'Avery 5163/8163 4" x 2"',
   pageleftmargin: 5,
   horizontalgutterlabelleft: 2,
@@ -18,4 +18,4 @@ const template8163 = {
   rowsperpage: 5
 };
 
-export default template8163;
+export default template8163100;

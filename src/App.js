@@ -7,7 +7,8 @@ import jsPDF from "jspdf";
 import MainMenu from "./components/MainMenu/MainMenu";
 import UrlForm from "./components/UrlForm/UrlForm";
 import Footer from "./components/Footer/Footer";
-import t from "./templates/template8163";
+import t100 from "./templates/template8163-100";
+import t120 from "./templates/template8163-120";
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
   }
 
   onGeneratePDF(newcodes) {
+    const t = t120;
     const inputcodes = newcodes
       .replace(/\r\n/g, "\n")
       .replace(/(?:(?:\r\n|\r|\n)\s*){2}/gm, "")
@@ -41,7 +43,6 @@ class App extends Component {
           unit: "mm",
           format: "letter"
         });
-        // doc.addImage(t.background, "PNG", 0, 0, 216, 279);
         let x = t.pageleftmargin + t.horizontalgutterlabelleft;
         let y = t.pagetopmargin + t.verticalgutterlabeltop;
         let w = t.w;
