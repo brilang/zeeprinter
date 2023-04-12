@@ -7,7 +7,7 @@ import jsPDF from "jspdf";
 import MainMenu from "./components/MainMenu/MainMenu";
 import UrlForm from "./components/UrlForm/UrlForm";
 import Footer from "./components/Footer/Footer";
-import t100 from "./templates/template8163-100";
+// import t100 from "./templates/template8163-100";
 import t120 from "./templates/template8163-120";
 
 class App extends Component {
